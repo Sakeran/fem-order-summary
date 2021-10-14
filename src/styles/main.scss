@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  ///////////////
+  // Colors
+  ///////////////
+  
+  // Primary
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  
+  // Neutral
+  --clr-v-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  
+  
+  ///////////////
+  // Typography
+  ///////////////
+
+  --font-size-root: 16px;
+  --font-body: 'Red Hat Display', sans-serif;
+}
+
+body {
+  font-size: var(--font-size-root);
+  font-family: var(--font-body);
+}
+
+// Utilities
+@import './utilities.scss';

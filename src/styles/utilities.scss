@@ -1,0 +1,45 @@
+// Font weights
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.weight-900 {
+  font-weight: 900;
+}
+
+// Font Colors
+
+.clr-white {
+  color: white;
+}
+
+.clr-dark-blue {
+  color: var(--clr-dark-blue);
+}
+
+.clr-desaturated-blue {
+  color: var(--clr-desaturated-blue);
+}
+
+.clr-light-blue {
+  color: var(--clr-bright-blue);
+}
+
+// Background Colors
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-v-pale-blue {
+  background-color: var(--clr-v-pale-blue);
+}
+
+.bg-bright-blue {
+  background-color: var(--clr-bright-blue);
+}
