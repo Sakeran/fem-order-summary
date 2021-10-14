@@ -2,9 +2,38 @@
 import Card from "../components/Card.astro";
 ---
 
-<style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+<style lang="scss">
+    body {
+        background-image: url("/images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .main-container {
+        min-height: 100vh;
+
+        box-sizing: content-box;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > :global(*) {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .attribution {
+            margin-top: auto;
+            margin-bottom: 1rem;
+            font-size: 11px; text-align: center;
+            a {
+                color: hsl(228, 45%, 44%);
+            }
+        }
+    }
 </style>
 
 <!DOCTYPE html>
@@ -25,12 +54,13 @@ import Card from "../components/Card.astro";
     </head>
 
 
-    <body>
-        <Card />
-    
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Your Name Here</a>.
+    <body class="bg-v-pale-blue">
+        <div class="main-container">
+            <Card />
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a href="#">Your Name Here</a>.
+            </div>
         </div>
     </body>
 </html>
