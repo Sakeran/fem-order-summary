@@ -27,9 +27,43 @@
   --font-body: 'Red Hat Display', sans-serif;
 }
 
+// Common Elements
+
 body {
   font-size: var(--font-size-root);
   font-family: var(--font-body);
+
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 2;
+}
+
+a {
+  --link-color: var(--clr-bright-blue);
+
+  color: var(--link-color);
+  text-decoration: none;
+
+  background: linear-gradient(
+    to top,
+    transparent 2px,
+    var(--link-color) 2px,
+    var(--link-color) 3px,
+    transparent 3px,
+    transparent);
+
+  &:hover, &:focus {
+    --link-color: hsl(245, 83%, 68%);
+;
+  }
 }
 
 // Utilities

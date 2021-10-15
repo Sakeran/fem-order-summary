@@ -20,13 +20,19 @@
 
 .clr-dark-blue {
   color: var(--clr-dark-blue);
+  
+  &\:hover {
+    &:hover, &:focus {
+      color: var(--clr-dark-blue);
+    }
+  }
 }
 
 .clr-desaturated-blue {
   color: var(--clr-desaturated-blue);
 }
 
-.clr-light-blue {
+.clr-bright-blue {
   color: var(--clr-bright-blue);
 }
 
@@ -36,10 +42,61 @@
   background-color: white;
 }
 
+.bg-gray {
+  background-color: hsl(228, 100%, 99%);
+}
+
 .bg-v-pale-blue {
   background-color: var(--clr-v-pale-blue);
 }
 
 .bg-bright-blue {
   background-color: var(--clr-bright-blue);
+}
+
+// UI Elements
+
+.primary-btn {
+  padding: 1rem;
+
+  border-radius: 0.75rem;
+
+  background-color: var(--clr-bright-blue);
+
+  color: white;
+  font-weight: 900;
+  text-align: center;
+
+  transition: background-color 0.15s ease-out;
+
+  &:hover, &:focus {
+    background: hsl(245, 83%, 68%);
+  }
+}
+
+// Misc
+
+.text-center {
+  text-align: center;
+}
+
+.hide-vis {
+  position: absolute;
+  top: -99999px;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.gap-top-2 {
+  margin-top: 2rem;
+}
+
+.bg-none {
+  background: none !important;
 }

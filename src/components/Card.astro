@@ -1,21 +1,81 @@
-<style>
+<style lang="scss">
   .card {
     max-width: 450px;
-    border: 1px solid black;
+
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  }
+
+  p {
+    max-width: 30ch;
+  }
+
+  .contents {
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .plan {
+    width: 100%;
+
+    padding: 1rem;
+
+    border-radius: 0.75rem;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 48px;
+      margin-right: 1.25rem;
+    }
+
+    a {
+      margin-left: auto;
+    }
   }
 </style>
 
 <div class="card bg-white">
-  Order Summary
+  <div class="image">
+    <img src="/images/illustration-hero.svg" alt="">
+  </div>
 
-    You can now listen to millions of songs, audiobooks, and podcasts on any 
-    device anywhere you like!
+  <div class="contents">
+    <h2 class="clr-dark-blue weight-900">Order Summary</h2>
 
-    Annual Plan
-    $59.99/year
+    <p class="text-center clr-desaturated-blue">
+      You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!
+    </p>
 
-    Change
+    <div class="plan bg-gray">
+      <img src="/images/icon-music.svg" alt="">
 
-    Proceed to Payment
-    Cancel Order
+      <h3 class="hide-vis">Plan Details</h3>
+      <dl>
+        <dt class="hide-vis">Plan Type</dt>
+        <dd class="weight-900">Annual Plan</dd>
+
+        <dt class="hide-vis">Plan Cost</dt>
+        <dd class="clr-desaturated-blue">$59.99/year</dd>
+      </dl>
+
+      <a class="weight-700" href="#">Change</a>
+    </div>
+
+    <a class="primary-btn full-width gap-top-2" href="#">Proceed to Payment</a>
+
+    <a class="clr-desaturated-blue clr-dark-blue:hover weight-900 bg-none gap-top-2" href="#">Cancel Order</a>
+  </div>
 </div>

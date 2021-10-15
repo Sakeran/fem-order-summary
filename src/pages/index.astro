@@ -7,6 +7,11 @@ import Card from "../components/Card.astro";
         background-image: url("/images/pattern-background-mobile.svg");
         background-repeat: no-repeat;
         background-size: 100%;
+
+        @media screen and (min-width: 768px) {
+            background-image: url("/images/pattern-background-desktop.svg");
+            background-size: 100% 50vh;
+        }
     }
 
     .main-container {
@@ -19,15 +24,11 @@ import Card from "../components/Card.astro";
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        & > :global(*) {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
+        justify-content: center;
 
         .attribution {
-            margin-top: auto;
-            margin-bottom: 1rem;
+            position: absolute;
+            bottom: 1rem;
             font-size: 11px; text-align: center;
             a {
                 color: hsl(228, 45%, 44%);
@@ -59,7 +60,7 @@ import Card from "../components/Card.astro";
             <Card />
             <div class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-                Coded by <a href="#">Your Name Here</a>.
+                Coded by <a href="https://alexander-morse.com">Alexander Morse</a>.
             </div>
         </div>
     </body>
